@@ -80,3 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Console message
 console.log('%c🏥 The NICEHR Group', 'font-size: 24px; font-weight: bold; color: #1a365d;');
 console.log('%cHealthcare IT. Simplified.', 'font-size: 14px; color: #6b7280;');
+
+// Dynamic copyright year range
+const startYear = 2012;
+const year = new Date().getFullYear();
+const el = document.getElementById("copyrightYear");
+if (el) el.textContent = year > startYear ? `${startYear}–${year}` : `${year}`;
