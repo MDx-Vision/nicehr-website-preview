@@ -43,6 +43,16 @@ Intro line: **"Delivery experience across healthcare systems."**
 python3 -m http.server 8000
 open http://localhost:8000
 ```
+Or open `index.html` directly in browser.
+
+## Responsive Breakpoints
+- `968px` - Tablet (nav collapses, grids → 2 columns)
+- `768px` - Small tablet
+- `640px` - Mobile (grids → 1-2 columns)
+- `480px` - Small mobile
+- `380px` - Very small (single column)
+
+Test with browser dev tools: `Cmd + Option + I` → `Cmd + Shift + M`
 
 ## Session History
 See @.claude/sessions/2025-12-28-doctrine-fixes.txt for full conversation.
