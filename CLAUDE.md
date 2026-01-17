@@ -16,13 +16,14 @@ See `ENTERPRISE_APPLE_DOCTRINE.md` and `AI_INSTRUCTIONS.md` for full guidelines.
 **Prohibited:** "Learn more", "Get started", "Discover", "We offer", persuasive questions
 
 ## Structure
-- 22 HTML pages (static site)
+- 23 HTML pages (static site)
 - `css/` - Stylesheets
 - `js/` - JavaScript
 - `images/` - Assets including client logos
 
 ## Key Pages
 - `index.html` - Homepage
+- `why-tng.html` - Direct-to-source positioning (consultant-owned differentiator)
 - `services.html` - All solutions
 - `rcm.html` - Revenue cycle management
 - `ehr-systems.html` - EHR platform expertise
@@ -42,6 +43,12 @@ Intro line: **"Delivery experience across healthcare systems."**
   - Reduced section/card/header padding on mobile
   - Fixed testimonial grid overflow
   - Added mobile nav scroll support
+- Added Why TNG page (Jan 2026):
+  - New `why-tng.html` with 10 doctrine-compliant sections
+  - Direct-to-source positioning vs traditional staffing middlemen
+  - Cost structure comparison, technology differentiators
+  - Visual EHR lifecycle diagram
+  - Nav restructured: About now dropdown with About Us + Why TNG
 
 ## Local Development
 ```bash
@@ -62,3 +69,4 @@ Test with browser dev tools: `Cmd + Option + I` → `Cmd + Shift + M`
 ## Session History
 - @.claude/sessions/2025-12-28-doctrine-fixes.txt - Doctrine compliance audit & fixes
 - @.claude/sessions/2026-01-10-mobile-fixes.txt - Mobile responsive fixes
+- @.claude/sessions/2026-01-17-why-tng-page.txt - Why TNG page creation & partnership research
