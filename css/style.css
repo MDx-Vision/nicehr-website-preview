@@ -296,6 +296,36 @@ p {
   color: var(--navy);
 }
 
+/* Dropdown Section Headers */
+.dropdown-section-header {
+  padding: 8px 20px 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--gray-200);
+  margin-top: 8px;
+}
+
+.dropdown-section-header:first-child {
+  border-top: none;
+  margin-top: 0;
+}
+
+/* Indented subsection links */
+.dropdown-menu .dropdown-section-header ~ a {
+  padding-left: 32px;
+}
+
+.dropdown-menu .dropdown-section-header ~ .dropdown-section-header {
+  padding-left: 20px;
+}
+
+.dropdown-menu .dropdown-section-header ~ .dropdown-section-header ~ a {
+  padding-left: 32px;
+}
+
 .nav-cta {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
