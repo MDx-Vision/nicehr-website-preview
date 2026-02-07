@@ -49,6 +49,11 @@ Intro line: **"Delivery experience across healthcare systems."**
   - Cost structure comparison, technology differentiators
   - Visual EHR lifecycle diagram
   - Nav restructured: About now dropdown with About Us + Why TNG
+- Restructured Revenue Cycle nav (Feb 2026):
+  - Combined Revenue Cycle and Industries into single dropdown
+  - Added section headers with indented subsection links
+  - Revenue Cycle Management: 9 items (Pre-Billing through RCM Platform)
+  - Industries: 5 items (Hospitals, Physicians, Surgery Centers, Imaging, Labs)
 
 ## Local Development
 ```bash
