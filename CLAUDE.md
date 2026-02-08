@@ -54,6 +54,10 @@ Intro line: **"Delivery experience across healthcare systems."**
   - Added section headers with indented subsection links
   - Revenue Cycle Management: 9 items (Pre-Billing through RCM Platform)
   - Industries: 5 items (Hospitals, Physicians, Surgery Centers, Imaging, Labs)
+- Doctrine compliance audit (Feb 2026):
+  - Full site audit: 92% compliant
+  - Fixed broken HTML in imaging-centers-rcm.html (<12% stat)
+  - Rewrote FAQ CTA to doctrine-compliant language
 
 ## Local Development
 ```bash
