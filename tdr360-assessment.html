@@ -407,6 +407,18 @@
             margin-top: 48px;
         }
     </style>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // TODO: Replace with your EmailJS credentials
+        const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+        const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+        const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+        (function() {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+        })();
+    </script>
 </head>
 <body>
     <header class="header">
@@ -814,6 +826,66 @@
             }
         }
 
+        function sendLeadEmail(leadData, scoreData) {
+            const templateParams = {
+                // Lead info
+                to_email: 'info@nicehrgroup.com',
+                lead_name: leadData.name,
+                lead_email: leadData.email,
+                lead_organization: leadData.organization,
+                lead_role: leadData.role || 'Not specified',
+                lead_ehr: leadData.ehr || 'Not specified',
+                // Score info
+                total_score: scoreData.total + '%',
+                score_status: scoreData.status,
+                score_infrastructure: scoreData.infrastructure + '%',
+                score_integrations: scoreData.integrations + '%',
+                score_data: scoreData.data + '%',
+                score_workflows: scoreData.workflows + '%',
+                score_support: scoreData.support + '%',
+                assessment_date: new Date().toLocaleDateString()
+            };
+
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                .then(function(response) {
+                    console.log('Email sent:', response.status);
+                }, function(error) {
+                    console.error('Email failed:', error);
+                });
+        }
+
+        function getScoreData() {
+            const domainScores = {
+                infrastructure: { total: 0, max: 0 },
+                integrations: { total: 0, max: 0 },
+                data: { total: 0, max: 0 },
+                workflows: { total: 0, max: 0 },
+                support: { total: 0, max: 0 }
+            };
+
+            questions.forEach((q, i) => {
+                const domain = q.dataset.domain;
+                const score = answers[i] || 0;
+                domainScores[domain].total += score;
+                domainScores[domain].max += 3;
+            });
+
+            let totalScore = 0;
+            let totalMax = 0;
+            const result = {};
+
+            for (const domain in domainScores) {
+                const pct = Math.round((domainScores[domain].total / domainScores[domain].max) * 100);
+                result[domain] = pct;
+                totalScore += domainScores[domain].total;
+                totalMax += domainScores[domain].max;
+            }
+
+            result.total = Math.round((totalScore / totalMax) * 100);
+            result.status = result.total >= 80 ? 'GO' : result.total >= 60 ? 'CONDITIONAL' : 'AT RISK';
+            return result;
+        }
+
         function updateNextButton() {
             const currentQ = questions[currentQuestion];
             const selected = currentQ.querySelector('.option.selected');
@@ -852,6 +924,19 @@
                 const org = document.getElementById('organization').value;
 
                 if (name && email && org) {
+                    // Collect lead data
+                    const leadData = {
+                        name: name,
+                        email: email,
+                        organization: org,
+                        role: document.getElementById('role').value,
+                        ehr: document.getElementById('ehr').value
+                    };
+
+                    // Get scores and send email
+                    const scoreData = getScoreData();
+                    sendLeadEmail(leadData, scoreData);
+
                     showResults();
                 } else {
                     alert('Please fill in all required fields.');
