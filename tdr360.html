@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDR360™ - Technical Dress Rehearsal Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            color: #1a1a1a;
+            min-height: 100vh;
+            padding: 56px 64px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 56px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand-logo {
+            height: 80px;
+            width: auto;
+        }
+
+        .brand-logo-primary {
+            height: 120px;
+            width: auto;
+        }
+
+        .brand-divider {
+            width: 1px;
+            height: 80px;
+            background: #e5e5e5;
+        }
+
+        .brand-name {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+        }
+
+        .brand-tagline {
+            font-size: 10px;
+            color: #666;
+            letter-spacing: 0.05em;
+        }
+
+        .methodology-badge {
+            text-align: right;
+        }
+
+        .methodology-name {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #1a1a1a;
+        }
+
+        .methodology-tm {
+            font-size: 9px;
+            vertical-align: super;
+            color: #666;
+        }
+
+        .methodology-sub {
+            font-size: 10px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* Hero */
+        .hero {
+            margin-bottom: 48px;
+        }
+
+        .headline {
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            max-width: 520px;
+        }
+
+        .subhead {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            max-width: 560px;
+        }
+
+        .subhead strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Transformation */
+        .transformation {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 48px;
+            align-items: center;
+            padding: 40px 48px;
+            background: #fafafa;
+            margin-bottom: 48px;
+        }
+
+        .transform-col h3 {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .transform-col.before h3 {
+            color: #999;
+        }
+
+        .transform-col.after h3 {
+            color: #1a1a1a;
+        }
+
+        .transform-list {
+            list-style: none;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .transform-col.before .transform-list {
+            color: #888;
+        }
+
+        .transform-col.after .transform-list {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .transform-arrow {
+            font-size: 28px;
+            color: #ccc;
+        }
+
+        /* Decision Matrix */
+        .decision-section {
+            margin-bottom: 48px;
+        }
+
+        .decision-title {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .decision-matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #e5e5e5;
+        }
+
+        .decision-card {
+            background: #fff;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .decision-threshold {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .decision-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .decision-desc {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer-section {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            padding-top: 32px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .cta h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .cta-link {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 2px;
+        }
+
+        .credentials-list {
+            list-style: none;
+            font-size: 12px;
+            color: #666;
+            line-height: 2.2;
+        }
+
+        .legal {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 9px;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body { padding: 24px; }
+            .header { flex-direction: column; gap: 24px; align-items: flex-start; }
+            .brand { flex-wrap: wrap; gap: 12px; }
+            .brand-logo-primary { height: 80px; }
+            .brand-logo { height: 60px; }
+            .brand-divider { height: 50px; }
+            .methodology-badge { text-align: left; }
+            .headline { font-size: 28px; }
+            .subhead { font-size: 14px; }
+            .transformation { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
+            .transform-arrow { transform: rotate(90deg); justify-self: center; }
+            .decision-matrix { grid-template-columns: 1fr; }
+            .footer-section { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 16px; }
+            .brand-logo-primary { height: 60px; }
+            .brand-logo { height: 45px; }
+            .brand-divider { display: none; }
+            .headline { font-size: 24px; }
+            .decision-card { padding: 20px 16px; }
+            .decision-threshold { font-size: 24px; }
+        }
+
+        @media print {
+            body { padding: 0.5in 0.6in; }
+            .transformation { background: #fafafa; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <img src="images/tdr/nicehr-logo.png" alt="The NiceHR Group" class="brand-logo-primary">
+            <div class="brand-divider"></div>
+            <img src="images/tdr/jbi-logo.png" alt="JBI" class="brand-logo">
+        </div>
+        <div class="methodology-badge">
+            <div class="methodology-name">TDR360<span class="methodology-tm">™</span></div>
+            <div class="methodology-sub">Technical Dress Rehearsal Framework</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 class="headline">Know you're ready.<br>Not hope you're ready.</h1>
+        <p class="subhead">
+            Spreadsheets can't give you certainty. <strong>TDR360 can.</strong> One platform. One score. One source of truth. Your entire go-live readiness—validated, tracked, and visible to everyone who needs to know.
+        </p>
+    </section>
+
+    <section class="transformation">
+        <div class="transform-col before">
+            <h3>Without TDR360</h3>
+            <ul class="transform-list">
+                <li>Chaos in folders</li>
+                <li>Waiting for updates</li>
+                <li>Guessing at readiness</li>
+                <li>Missing documents</li>
+                <li>Decisions based on gut</li>
+            </ul>
+        </div>
+        <div class="transform-arrow">→</div>
+        <div class="transform-col after">
+            <h3>With TDR360</h3>
+            <ul class="transform-list">
+                <li>Everything in one place</li>
+                <li>Instant visibility</li>
+                <li>A score you can trust</li>
+                <li>Nothing gets lost</li>
+                <li>Decisions based on data</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="decision-section">
+        <div class="decision-title">One Score. Three Outcomes.</div>
+        <div class="decision-matrix">
+            <div class="decision-card">
+                <div class="decision-threshold">≥80%</div>
+                <div class="decision-label">Go</div>
+                <div class="decision-desc">You're ready. Launch with confidence.</div>
+            </div>
+            <div class="decision-card">
+                <div class="decision-threshold">60–79%</div>
+                <div class="decision-label">Conditional</div>
+                <div class="decision-desc">Almost there. Mitigate and proceed.</div>
+            </div>
+            <div class="decision-card">
+                <div class="decision-threshold">&lt;60%</div>
+                <div class="decision-label">No-Go</div>
+                <div class="decision-desc">Not yet. Fix what's broken first.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="cta">
+            <h3>See what ready actually looks like.</h3>
+            <p>Request a TDR360 assessment for your next go-live.</p>
+            <a href="mailto:tdr@nicehr.com" class="cta-link">Get Started →</a>
+        </div>
+        <div class="credentials">
+            <ul class="credentials-list">
+                <li>10+ EHR platforms: Epic, Cerner, MEDITECH, Veradigm, Athenahealth</li>
+                <li>HIPAA compliant · SOC 2 · HITRUST experience</li>
+                <li>SBA 8(a) Certified · Minority-Owned Business</li>
+                <li>1,000+ consultants · Founded 2012</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="legal">
+        <span>© 2026 The NiceHR Group. TDR360 is a trademark of The NiceHR Group.</span>
+        <span>Confidential</span>
+    </footer>
+</body>
+</html>
