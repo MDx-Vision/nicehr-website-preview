@@ -2349,3 +2349,180 @@ p {
   opacity: 0.75;
   text-align: center;
 }
+
+/* ============================================
+   A- MOTION DESIGN SYSTEM
+   Stripe/Linear-inspired animations
+   ============================================ */
+
+/* Scroll-triggered fade up animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for grid items */
+.scroll-reveal[data-delay="1"] { transition-delay: 0.1s; }
+.scroll-reveal[data-delay="2"] { transition-delay: 0.2s; }
+.scroll-reveal[data-delay="3"] { transition-delay: 0.3s; }
+.scroll-reveal[data-delay="4"] { transition-delay: 0.4s; }
+.scroll-reveal[data-delay="5"] { transition-delay: 0.5s; }
+.scroll-reveal[data-delay="6"] { transition-delay: 0.6s; }
+
+/* Section headers slide in from left */
+.section-header.scroll-reveal {
+  transform: translateY(30px);
+}
+
+/* Enhanced button hover states - scale + shadow lift */
+.btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover,
+.btn-gold:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(26, 54, 93, 0.25);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(26, 54, 93, 0.15);
+}
+
+/* Nav dropdown smooth animation */
+.dropdown-menu {
+  transform: translateX(-50%) translateY(10px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* EHR platform logo hover glow */
+.ehr-item {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ehr-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(26, 54, 93, 0.15),
+              0 0 30px rgba(191, 169, 128, 0.2);
+  border-color: var(--gold);
+}
+
+/* Card enhanced hover */
+.card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(26, 54, 93, 0.12);
+}
+
+/* Stat counter animation */
+.stat-number.counting {
+  transition: none;
+}
+
+/* Lifecycle diagram animation */
+.lifecycle-step {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lifecycle-step.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.lifecycle-step:nth-child(1) { transition-delay: 0.1s; }
+.lifecycle-step:nth-child(2) { transition-delay: 0.2s; }
+.lifecycle-step:nth-child(3) { transition-delay: 0.3s; }
+.lifecycle-step:nth-child(4) { transition-delay: 0.4s; }
+.lifecycle-step:nth-child(5) { transition-delay: 0.5s; }
+
+/* Certification badges stagger */
+.cert-badge {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-badge:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(26, 54, 93, 0.12);
+  border-color: var(--gold);
+}
+
+/* Testimonial card hover */
+.testimonial-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(26, 54, 93, 0.1);
+}
+
+/* Feature block image parallax-like effect */
+.feature-image-real {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-block:hover .feature-image-real {
+  transform: scale(1.02);
+}
+
+/* Team photo hover */
+.team-photo {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover .team-photo {
+  transform: scale(1.08);
+  box-shadow: 0 20px 50px rgba(26, 54, 93, 0.3);
+}
+
+/* Icon container glow on card hover */
+.card:hover .icon-container {
+  box-shadow: 0 12px 40px rgba(26, 54, 93, 0.35),
+              0 0 20px rgba(191, 169, 128, 0.3);
+}
+
+/* Smooth page transitions feel */
+.section {
+  transition: opacity 0.3s ease;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .lifecycle-step,
+  .btn,
+  .card,
+  .ehr-item,
+  .cert-badge,
+  .testimonial-card,
+  .team-photo,
+  .feature-image-real {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

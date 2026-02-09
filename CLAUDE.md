@@ -16,7 +16,7 @@ See `ENTERPRISE_APPLE_DOCTRINE.md` and `AI_INSTRUCTIONS.md` for full guidelines.
 **Prohibited:** "Learn more", "Get started", "Discover", "We offer", persuasive questions
 
 ## Structure
-- 23 HTML pages (static site)
+- 26 HTML pages (static site)
 - `css/` - Stylesheets
 - `js/` - JavaScript
 - `images/` - Assets including client logos
@@ -28,6 +28,10 @@ See `ENTERPRISE_APPLE_DOCTRINE.md` and `AI_INSTRUCTIONS.md` for full guidelines.
 - `rcm.html` - Revenue cycle management
 - `ehr-systems.html` - EHR platform expertise
 - `dischedule.html` - Behavioral matching platform
+- `blog.html` - Blog index with article cards
+- `blog-ehr-golive.html` - 5 Keys to Successful EHR Go-Live article
+- `blog-behavioral-matching.html` - Behavioral Matching article (DiSChedule)
+- `blog-oracle-cerner.html` - Oracle Cerner in 2026 article
 
 ## Client Logos Section
 Header must be: **"Healthcare organizations served."**
@@ -58,6 +62,21 @@ Intro line: **"Delivery experience across healthcare systems."**
   - Full site audit: 92% compliant
   - Fixed broken HTML in imaging-centers-rcm.html (<12% stat)
   - Rewrote FAQ CTA to doctrine-compliant language
+- A- Motion Design System (Feb 2026):
+  - Scroll-triggered fade-up animations with Intersection Observer
+  - Staggered reveals for grid items (0.1-0.6s delays)
+  - Stat counter animation (requestAnimationFrame)
+  - Enhanced button hover states (scale + shadow lift)
+  - Smooth nav dropdown animation
+  - EHR logo hover glow (gold accent)
+  - Lifecycle diagram animation
+  - Accessibility: prefers-reduced-motion support
+- Blog Content (Feb 2026):
+  - 3 doctrine-compliant articles written
+  - EHR Go-Live (Rafael Rodriguez)
+  - Behavioral Matching/DiSChedule (Wendy Perdomo)
+  - Oracle Cerner 2026 (NICEHR Team)
+  - Blog cards now link to full articles
 
 ## Local Development
 ```bash
