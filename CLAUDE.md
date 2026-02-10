@@ -87,6 +87,11 @@ Intro line: **"Delivery experience across healthcare systems."**
   - Cerner Optimization: 23% documentation time reduction
   - RCM Turnaround: $4.2M recovered
   - Each includes challenge, approach, results, testimonial
+- Photography Guide (Feb 2026):
+  - Created `PHOTO_GUIDE.md` with shot list and specs
+  - Organized `/images/` folder structure (heroes, team, consulting, office)
+  - README files in each image folder with requirements
+  - Team headshots already in place on About page
 
 ## Local Development
 ```bash
