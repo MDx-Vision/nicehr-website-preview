@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case Study: Cerner Workflow Optimization at Academic Medical Center - 23% reduction in documentation time.">
+  <title>Cerner Optimization Case Study | The NICEHR Group</title>
+  <link rel="stylesheet" href="css/style.css?v=4.0">
+  <style>
+    .case-study-content { max-width: 900px; margin: 0 auto; }
+    .case-study-content h2 { margin-top: 48px; margin-bottom: 16px; color: var(--navy); }
+    .case-study-content p { margin-bottom: 20px; line-height: 1.8; }
+    .case-study-content ul { margin-bottom: 24px; padding-left: 24px; }
+    .case-study-content li { margin-bottom: 12px; line-height: 1.7; }
+    .case-study-meta { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .case-study-meta-item { text-align: center; }
+    .case-study-meta-item .label { font-size: 0.875rem; color: var(--gray-500); margin-bottom: 4px; }
+    .case-study-meta-item .value { font-size: 1.25rem; font-weight: 600; color: var(--navy); }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin: 32px 0; }
+    .metric-card { background: var(--gray-light); padding: 32px; border-radius: 12px; text-align: center; }
+    .metric-card .number { font-size: 2.5rem; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+    .metric-card .label { color: var(--navy); font-weight: 500; }
+    .challenge-box { background: linear-gradient(135deg, var(--navy) 0%, #0f2440 100%); color: white; padding: 40px; border-radius: 12px; margin: 32px 0; }
+    .challenge-box h3 { color: var(--gold); margin-bottom: 16px; }
+    .solution-box { background: var(--gray-light); padding: 40px; border-radius: 12px; margin: 32px 0; border-left: 4px solid var(--gold); }
+    .solution-box h3 { color: var(--navy); margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="https://thenicehrgroup.com/wp-content/uploads/2023/10/Logo.webp" alt="The NICEHR Group" class="nav-logo-img"></a>
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-dropdown">
+          <a href="about.html" class="nav-link">About</a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="why-tng.html">Why TNG</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="services.html" class="nav-link">Advisory Services</a>
+          <div class="dropdown-menu">
+            <a href="services.html#strategic-planning">IT Planning</a>
+            <a href="services.html#compliance">Regulatory Compliance</a>
+            <a href="services.html#project-management">Project Management</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="ehr-implementation.html" class="nav-link">EHR Implementation</a>
+          <div class="dropdown-menu">
+            <a href="ehr-implementation.html#selection">EHR System Selection</a>
+            <a href="ehr-implementation.html#planning">Pre-Planning & Implementation</a>
+            <a href="ehr-implementation.html#workflow">Workflow & Process Assessment</a>
+            <a href="ehr-implementation.html#design">System Design & Build</a>
+            <a href="ehr-implementation.html#testing">Testing & Quality Assurance</a>
+            <a href="ehr-implementation.html#training">Training & Go-Live Support</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="staffing.html" class="nav-link">Healthcare Staffing</a>
+          <div class="dropdown-menu">
+            <a href="staffing.html#augmentation">Staff Augmentation</a>
+            <a href="staffing.html#device-training">Device & Software Training</a>
+            <a href="staffing.html#program-development">Training Program Development</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="data-analytics.html" class="nav-link">Data & Analytics</a>
+          <div class="dropdown-menu">
+            <a href="data-analytics.html#enterprise">Enterprise Data Management</a>
+            <a href="data-analytics.html#population-health">Population Health Data</a>
+            <a href="data-analytics.html#automation">Data Automation</a>
+            <a href="data-analytics.html#reporting">Custom Reporting & Analytics</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="rcm.html" class="nav-link">Revenue Cycle</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-section-header">Revenue Cycle Management</div>
+            <a href="rcm.html#pre-billing">Pre-Billing</a>
+            <a href="rcm.html#billing">Billing & Claims</a>
+            <a href="rcm.html#posting">Payment Posting</a>
+            <a href="rcm.html#collections">Collections & A/R</a>
+            <a href="rcm.html#patient-services">Patient Services</a>
+            <a href="rcm.html#coding">Medical Coding</a>
+            <a href="rcm.html#credentialing">Credentialing</a>
+            <a href="rcm.html#analytics">Analytics & Reporting</a>
+            <a href="rcm-platform.html">RCM Platform</a>
+            <div class="dropdown-section-header">Industries</div>
+            <a href="hospitals-rcm.html">Hospitals & Health Systems</a>
+            <a href="physicians-rcm.html">Physician Practices</a>
+            <a href="surgery-centers-rcm.html">Surgery Centers</a>
+            <a href="imaging-centers-rcm.html">Imaging Centers</a>
+            <a href="laboratories-rcm.html">Laboratories</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <header class="page-header" style="background: linear-gradient(135deg, rgba(26, 54, 93, 0.92) 0%, rgba(15, 36, 64, 0.95) 100%), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920&q=80') center/cover no-repeat;">
+    <p class="eyebrow"><a href="case-studies.html" style="color: var(--gold); text-decoration: none;">Case Studies</a> / Optimization</p>
+    <h1>Academic Medical Center.<br>Cerner Optimization.</h1>
+    <p class="lead">23% reduction in documentation time. 18% improvement in physician satisfaction.</p>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="case-study-content">
+
+        <div class="case-study-meta">
+          <div class="case-study-meta-item">
+            <div class="label">Industry</div>
+            <div class="value">Academic Medical Center</div>
+          </div>
+          <div class="case-study-meta-item">
+            <div class="label">Platform</div>
+            <div class="value">Oracle Cerner</div>
+          </div>
+          <div class="case-study-meta-item">
+            <div class="label">Beds</div>
+            <div class="value">650+</div>
+          </div>
+          <div class="case-study-meta-item">
+            <div class="label">Duration</div>
+            <div class="value">6 Months</div>
+          </div>
+          <div class="case-study-meta-item">
+            <div class="label">TNG Role</div>
+            <div class="value">Optimization Lead</div>
+          </div>
+        </div>
+
+        <div class="challenge-box">
+          <h3>The Challenge.</h3>
+          <p style="margin-bottom: 0;">A 650-bed academic medical center had been on Cerner Millennium for seven years. Physician satisfaction with the EHR had declined to 62%. Documentation time had increased as workarounds accumulated. The organization needed optimization without disrupting ongoing clinical operations or research activities.</p>
+        </div>
+
+        <h2>Situation.</h2>
+        <p>The medical center's Cerner implementation had succeeded technically but degraded operationally over time. New requirements were addressed through workarounds rather than system redesign. Documentation burden had increased incrementally until physicians spent 2+ hours per day on EHR tasks beyond direct patient care.</p>
+
+        <p>Previous optimization attempts had focused on training. Physicians were told to use the system more efficiently. This approach failed because the underlying workflows were the problem, not user behavior. The organization needed systematic workflow analysis and rebuild.</p>
+
+        <p>Complicating factors included active research protocols requiring specific documentation, teaching hospital workflows that differed from community settings, and a physician population with varying EHR proficiency levels.</p>
+
+        <h2>Approach.</h2>
+        <p>TNG deployed a team of six consultants specializing in Cerner optimization. The engagement began with workflow observation—consultants shadowed physicians across eight departments to document actual EHR usage patterns versus intended workflows.</p>
+
+        <div class="solution-box">
+          <h3>Optimization Focus Areas.</h3>
+          <ul style="margin-bottom: 0;">
+            <li><strong>Order set consolidation:</strong> The organization had 2,400+ order sets. Analysis revealed 60% duplication. Consolidation reduced the count to 950 clinically distinct sets.</li>
+            <li><strong>Documentation template redesign:</strong> Note templates were rebuilt around clinical workflow rather than billing requirements. Smart phrases reduced repetitive data entry.</li>
+            <li><strong>PowerChart navigation:</strong> Custom views were created for high-volume specialties. Hospitalists, surgeons, and ED physicians received role-specific configurations.</li>
+            <li><strong>Alert fatigue reduction:</strong> Clinical decision support alerts were audited. Override rates above 80% triggered alert elimination or modification. Alert volume decreased 45%.</li>
+          </ul>
+        </div>
+
+        <p>Each change was tested with physician champions before broad deployment. Modifications that increased documentation time, even slightly, were rejected or redesigned. The standard was measurable time savings—not feature addition.</p>
+
+        <h2>Results.</h2>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="number">23%</div>
+            <div class="label">Reduction in Documentation Time</div>
+          </div>
+          <div class="metric-card">
+            <div class="number">18%</div>
+            <div class="label">Physician Satisfaction Increase</div>
+          </div>
+          <div class="metric-card">
+            <div class="number">45%</div>
+            <div class="label">Fewer CDS Alerts</div>
+          </div>
+          <div class="metric-card">
+            <div class="number">60%</div>
+            <div class="label">Order Set Reduction</div>
+          </div>
+        </div>
+
+        <p>Documentation time decreased by an average of 28 minutes per physician per day. Across 400+ physicians, this represented significant recovered clinical capacity. Physician satisfaction with the EHR increased from 62% to 80% in post-project surveys.</p>
+
+        <p>Alert override rates dropped below 40% for remaining alerts—indicating clinically meaningful decision support rather than background noise. Order entry time decreased as physicians navigated fewer, more relevant order sets.</p>
+
+        <h2>Sustainability.</h2>
+        <p>TNG established a governance structure for ongoing optimization. A physician informatics committee now reviews proposed system changes. New order sets require clinical justification and consolidation review. Alert additions require evidence of clinical impact.</p>
+
+        <p>The medical center conducts quarterly workflow assessments in high-volume areas. Optimization is now continuous rather than periodic.</p>
+
+        <div class="testimonial" style="margin-top: 48px;">
+          <p class="testimonial-quote">"We had tried to fix our EHR problems by training physicians to work around them. TNG showed us the system was the problem, not our users. The workflow analysis alone justified the engagement."</p>
+          <p class="testimonial-author">Chief Medical Information Officer</p>
+          <p class="testimonial-title">Academic Medical Center</p>
+        </div>
+
+        <div class="text-center" style="margin-top: 48px;">
+          <a href="ehr-systems.html" class="btn btn-primary">View EHR Systems</a>
+          <a href="contact.html" class="btn btn-secondary" style="margin-left: 12px;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Related</p>
+        <h2>More Case Studies.</h2>
+      </div>
+      <div class="grid-3" style="margin-top: 32px;">
+        <a href="case-study-epic-implementation.html" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-body">
+            <span class="badge" style="margin-bottom: 16px;">Implementation</span>
+            <h4>Epic Implementation</h4>
+            <p style="margin-top: 12px;">Regional health system: 12 hospitals, 18-month go-live.</p>
+          </div>
+        </a>
+        <a href="case-study-rcm-turnaround.html" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-body">
+            <span class="badge" style="margin-bottom: 16px;">Revenue Cycle</span>
+            <h4>RCM Turnaround</h4>
+            <p style="margin-top: 12px;">Multi-specialty group recovers $4.2M in 12 months.</p>
+          </div>
+        </a>
+        <a href="case-studies.html" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-body">
+            <span class="badge" style="margin-bottom: 16px;">Featured</span>
+            <h4>Methodist Fremont Health</h4>
+            <p style="margin-top: 12px;">Emergency department go-live support.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>The NICEHR Group</h3><p>National Independent Consultants of Electronic Health Records. Consultant-owned and operated healthcare IT services firm.</p></div>
+        <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li><li><a href="veterans.html">Veterans Program</a></li></ul></div>
+        <div class="footer-links"><h4>Solutions</h4><ul><li><a href="ehr-systems.html">EHR Systems</a></li><li><a href="dischedule.html">DiSChedule</a></li><li><a href="data-analytics.html">Data & Analytics</a></li><li><a href="rcm.html">Revenue Cycle</a></li><li><a href="government.html">Government</a></li></ul></div>
+        <div class="footer-links"><h4>Contact</h4><ul><li><a href="tel:212-203-3513">212-203-3513</a></li><li><a href="mailto:info@thenicehrgroup.com">info@thenicehrgroup.com</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="copyrightYear"></span> The NICEHR Group. All rights reserved.</p><p>DUNS: 078606581 | CAGE: 7CTE3</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
