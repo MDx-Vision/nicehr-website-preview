@@ -16,7 +16,7 @@ See `ENTERPRISE_APPLE_DOCTRINE.md` and `AI_INSTRUCTIONS.md` for full guidelines.
 **Prohibited:** "Learn more", "Get started", "Discover", "We offer", persuasive questions
 
 ## Structure
-- 26 HTML pages (static site)
+- 29 HTML pages (static site)
 - `css/` - Stylesheets
 - `js/` - JavaScript
 - `images/` - Assets including client logos
@@ -32,6 +32,10 @@ See `ENTERPRISE_APPLE_DOCTRINE.md` and `AI_INSTRUCTIONS.md` for full guidelines.
 - `blog-ehr-golive.html` - 5 Keys to Successful EHR Go-Live article
 - `blog-behavioral-matching.html` - Behavioral Matching article (DiSChedule)
 - `blog-oracle-cerner.html` - Oracle Cerner in 2026 article
+- `case-studies.html` - Case studies index
+- `case-study-epic-implementation.html` - Epic 12-hospital implementation
+- `case-study-cerner-optimization.html` - Cerner workflow optimization
+- `case-study-rcm-turnaround.html` - RCM $4.2M recovery
 
 ## Client Logos Section
 Header must be: **"Healthcare organizations served."**
@@ -77,6 +81,12 @@ Intro line: **"Delivery experience across healthcare systems."**
   - Behavioral Matching/DiSChedule (Wendy Perdomo)
   - Oracle Cerner 2026 (NICEHR Team)
   - Blog cards now link to full articles
+- Case Studies (Feb 2026):
+  - 3 case studies with metrics
+  - Epic Implementation: 12 hospitals, 18-month go-live
+  - Cerner Optimization: 23% documentation time reduction
+  - RCM Turnaround: $4.2M recovered
+  - Each includes challenge, approach, results, testimonial
 
 ## Local Development
 ```bash
